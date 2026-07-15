@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kebijakan Privasi - XL SATU Promo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen py-12 px-4">
+
+    <div class="max-w-3xl mx-auto bg-white p-6 md:p-10 rounded-2xl shadow-sm border border-slate-200">
+        
+        <div class="mb-8">
+            <a href="index.html" class="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-800 transition gap-2">
+                &larr; Kembali ke Halaman Utama
+            </a>
+        </div>
+
+        <header class="border-b border-slate-100 pb-6 mb-8">
+            <h1 class="text-2xl md:text-3xl font-black text-slate-900 tracking-tight mb-2">
+                Kebijakan Privasi
+            </h1>
+            <p class="text-xs md:text-sm text-slate-500 font-medium">
+                Landing Page Promo Resmi XL SATU
+            </p>
+        </header>
+
+        <main>
+            <div id="privacy-content" class="whitespace-pre-line text-sm md:text-base leading-relaxed text-slate-600 tracking-wide">
+                </div>
+        </main>
+
+        <footer class="mt-12 pt-6 border-t border-slate-100 text-center text-xs text-slate-400 font-medium">
+            &copy; 2026 Campaign Promo XL SATU. Hak Cipta Dilindungi.
+        </footer>
+
+    </div>
+
+    <script src="privacy_policy.js"></script>
+
+    <script>
+        // Otomatis memasukkan teks dari variabel di file privacy_policy.js ke halaman web
+        if (typeof kontenPrivacyPolicy !== 'undefined') {
+            document.getElementById('privacy-content').innerText = kontenPrivacyPolicy.trim();
+        } else {
+            document.getElementById('privacy-content').innerHTML = 
+                `<p class="text-red-500 font-semibold bg-red-50 p-4 rounded-xl border border-red-100">
+                    Gagal memuat dokumen. Pastikan file 'privacy_policy.js' sudah berada di folder yang sama.
+                </p>`;
+        }
+    </script>
+
+</body>
+</html>
